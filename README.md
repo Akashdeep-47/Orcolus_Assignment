@@ -10,4 +10,17 @@
    ``` aws --version ```
 3. Now configue AWS CLI User crdentials. <br>
    ``` aws configure ``` <br>
-   <h6> Now type : <h6> 
+   ``` AWS Access Key ID : <* Enter your access key *> ``` <br>
+   ``` AWS Secret Access Key ID : <* Enter your secret access key *> ``` <br>
+   ``` Default region name : <* Your Choice *> ``` <br>
+   ``` Default output format : <* Just press ENTER key *> ```
+   
+---
+
+## Step 2: Creating a bucket using AWS CLI
+``` aws s3 mb s3://<* bucket-name *> --region <* your-choice *> ```
+<h4> Note : Bucket-name should br unique. </h4>
+
+---
+
+
