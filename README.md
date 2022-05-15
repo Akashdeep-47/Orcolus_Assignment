@@ -38,7 +38,7 @@ Creating the Script for sending files and folder to S3 bucket. <br>
 Deleting the files and folders from local drive. <br>
 ``` find ${working_dir}* -mtime +${days_to_data} -exec rm {} \; ``` <br>
 1. ``` rm ``` this command is used to removes all local files. <br>
-2. Rest all are arguments are same as above.
+2. Rest all are arguments are same as above [Step 3].
 
 --- 
 
@@ -56,7 +56,10 @@ find ${working_dir}* -mtime +${days_to_data} -exec aws s3 mv s3://orcolus-bucket
 
 #Now deleting file from drive.
 find ${working_dir}* -mtime +${days_to_data} -exec rm {} \;
-```
+
+``` 
+1. ``` #!/bin/bash ``` called as she-bang, used to recognise that its a bash file.
+2. Rest explained in [Step-3] and [Step-4].
 
 
 
