@@ -4,9 +4,9 @@
 ---
 
 ## Step 1: Install AWS and configure AWS CLI User.
-1. To install AWS in Ubuntu system as I will be using Ubuntu as my system, if you have same then you can follow the process. <br>
+1. To install AWS in the Ubuntu system as I will be using Ubuntu as my system, if you are using the Ubuntu then you can follow the process. <br>
    ``` sudo apt-get install awscli ```
-2. Check version to verify once, if installed correectly. <br>
+2. Check version to verify once, if installed correctly. <br>
    ``` aws --version ```
 3. Now configue AWS CLI User crdentials. <br>
    ``` aws configure ``` <br>
@@ -25,18 +25,18 @@
 ---
 
 ## Step 3:
-Creating the Script for sending files and folder to S3 bucket. <br>
+Creating the Script for sending files and folder to the S3 bucket. <br>
 ``` find ${working_dir}* -mtime +${days_to_data} -exec aws s3 mv s3://orcolus-bucket {} \; ``` <br>
-1. ``` ${working_dir}* ``` this is the first argument containing full path the directory where all file and folders are stored. <br>
-2. ``` -mtime +${days_to_data} ``` this is the second argument ``` -mtime ```, is used to specify the number of days old that the file is. If you enter +10, it will find files older than 10 days. <br>
+1. ``` ${working_dir}* ``` the first argument containing the full path of the directory where all file and folders are stored. <br>
+2. ``` -mtime +${days_to_data} ``` the second argument ``` -mtime ```, is used to specify the number of days old that the file is. If you enter +10, it will find files older than 10 days. <br>
 3. ``` ${days_to_data} ``` is the variable used which is assigned 1 which means 1 day old. <br>
-4. ``` -exec ``` this is the third argument that allows you to pass in a command such as mv. The {} \; at the end is required to end the command. <br>
+4. ``` -exec ``` the third argument that allows you to pass in a command such as mv. The {} \; at the end is required to end the command. <br>
 5. ``` aws s3 mv s3://orcolus-bucket {} ``` this command is used to move file from drive to S3 bucket. 
 
 --- 
 
 ## Step 4:
-Deleting the files and folders from local drive. <br>
+Deleting the files and folders from the local drive. <br>
 ``` find ${working_dir}* -mtime +${days_to_data} -exec rm {} \; ``` <br>
 1. ``` rm ``` this command is used to removes all local files. <br>
 2. Rest all are arguments are same as above [Step 3].
@@ -59,7 +59,7 @@ find ${working_dir}* -mtime +${days_to_data} -exec aws s3 mv s3://orcolus-bucket
 find ${working_dir}* -mtime +${days_to_data} -exec rm {} \;
 
 ``` 
-1. ``` #!/bin/bash ``` called as she-bang, used to recognise that its a bash file.
+1. ``` #!/bin/bash ``` called as she-bang, used to recognize that its a bash file.
 2. Rest explained in [Step-3] and [Step-4].
 
 
