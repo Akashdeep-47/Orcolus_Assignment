@@ -18,9 +18,14 @@
 ---
 
 ## Step 2: Creating a bucket using AWS CLI
-``` aws s3 mb s3://<* bucket-name *> --region <* your-choice *> ```
-<h4> Note : Bucket-name should br unique. </h4>
+``` aws s3 mb s3://<* bucket-name *> --region <* your-choice *> ``` <br>
+``` mb ``` command is used to create bucket for the user. <br>
+``` bucket-name ``` should br unique. 
 
 ---
+
+## Step 3:
+Creating the Script for sending files and folder to S3 bucket.
+``` find ${working_dir}* -mtime +${days_to_data} -exec aws s3 mv s3://orcolus-bucket {} \; ``` <br>
 
 
