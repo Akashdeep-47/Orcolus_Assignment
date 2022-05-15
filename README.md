@@ -4,7 +4,7 @@
 ---
 
 ## Step 1: Install AWS and configure AWS CLI User.
-1. To install AWS in the Ubuntu system as I will be using the Ubuntu as my system, if you are using the Ubuntu then you can follow the process. <br>
+1. To install AWS in the Ubuntu system as I will be using the Ubuntu as my system, if you are using the same, then you can follow the process. <br>
    ``` sudo apt-get install awscli ```
 2. Check version to verify once, if installed correctly. <br>
    ``` aws --version ```
