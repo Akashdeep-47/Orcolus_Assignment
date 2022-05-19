@@ -24,8 +24,7 @@
 
 ---
 
-## Step 3:
-Creating the Script for sending files and folder to the S3 bucket. <br>
+## Step 3: Creating the Script for sending files and folder to the S3 bucket.
 ``` find ${working_dir}* -mtime +${days_to_data} -exec aws s3 mv s3://orcolus-bucket {} \; ``` <br>
 1. ``` ${working_dir}* ``` the first argument containing the full path of the directory where all file and folders are stored. <br>
 2. ``` -mtime +${days_to_data} ``` the second argument ``` -mtime ```, is used to specify the number of days old that the file is. If you enter +10, it will find files older than 10 days. <br>
