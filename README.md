@@ -17,7 +17,7 @@
    
 ---
 
-## Step 2: Creating a bucket using AWS CLI
+## Step 2: Creating a bucket using AWS CLI.
 ``` aws s3 mb s3://<* bucket-name *> --region <* your-choice *> ``` <br>
 ``` mb ``` command is used to create bucket for the user. <br>
 ``` bucket-name ``` should br unique. 
